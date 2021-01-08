@@ -37,6 +37,8 @@
   <rosparam file="$(find crane_plus_hardware)/config/arm_joint_trajectory_controller.yaml"
     command="load"
     />
+    
+    
   <node name="joint_trajectory_controller_spawner"
     pkg="dynamixel_controllers"
     type="controller_spawner.py"
@@ -72,6 +74,6 @@
   </node>
   <node name="robot_state_publisher"
     pkg="robot_state_publisher"
-    type="robot_state_publisher"
-    />
+    type="robot_state_publisher">
+  </node>
 </launch>

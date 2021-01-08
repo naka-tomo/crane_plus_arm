@@ -1,7 +1,11 @@
 <launch>
   <!-- The robot description, used by many of the control nodes -->
   <param name="robot_description"
-    command="$(find xacro)/xacro --inorder '$(find crane_plus_description)/urdf/crane_plus.urdf.xacro'"
+    command="$(find xacro)/xacro '$(find crane_plus_description)/urdf/crane_plus.urdf'"
+    />
+
+  <param name="robot_description_semantic"
+    command="$(find xacro)/xacro '$(find crane_plus_description)/urdf/crane_plus.urdf'"
     />
 
   <include file="$(find crane_plus_hardware)/launch/start_arm.launch"/>

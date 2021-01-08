@@ -12,5 +12,11 @@
 	args="$(arg command_args)" output="screen">
     <rosparam command="load" file="$(find crane_plus_moveit_config)/config/kinematics.yaml"/>
   </node>
+  
+  <include file="$(find crane_plus_moveit_config)/launch/move_group.launch">
+    <arg name="allow_trajectory_execution" value="true"/>
+    <arg name="info" value="true"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
 
 </launch>
